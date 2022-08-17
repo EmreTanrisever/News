@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  NewsApp
+
+  Created by Emre Tanrısever on 13.08.2022.
+  
+*/
+
+Splash.AppName = "News From Earth";
+Splash.MyName = "Created By Emre Tanrisever.";
+
+TabBar.newsName = "News";
+TabBar.bookMarksName = "Bookmarks";
+
+NewsList.title = "News";
+
+BookMarks.title = "BookMarks";

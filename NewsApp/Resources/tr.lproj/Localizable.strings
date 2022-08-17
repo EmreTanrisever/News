@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  NewsApp
+
+  Created by Emre Tanrısever on 13.08.2022.
+  
+*/
+
+Splash.AppName = "Dünyadan Haberler";
+Splash.MyName = "Emre Tanrisever Tarafıdan Yapıldı.";
+
+TabBar.newsName = "Haberler";
+TabBar.bookMarksName = "Kaydedilenler";
+
+NewsList.title = "Haberler";
+
+BookMarks.title = "Kaydedilenler";
