@@ -8,19 +8,19 @@
 import Foundation
 
 final class UserDefaultsManager {
-    private let userDefaults = UserDefaults.standard
+    static let userDefaults = UserDefaults.standard
     private let key = "News"
 
     func saveNews(news: News) {
         var savedNews = readNews()
         savedNews.append(news)
         if let newsArray = try? JSONEncoder().encode(savedNews) {
-            userDefaults.set(newsArray, forKey: key)
+            UserDefaultsManager.userDefaults.set(newsArray, forKey: key)
         }
     }
 
     func readNews() -> [News] {
-        guard let data = userDefaults.data(forKey: key),
+        guard let data = UserDefaultsManager.userDefaults.data(forKey: key),
               let savedItems = try? JSONDecoder().decode([News].self, from: data) else {
                   return [News]()
         }
@@ -40,7 +40,7 @@ final class UserDefaultsManager {
 
     func saveNewsAsAnArray(news: [News]) {
         if let newsArray = try? JSONEncoder().encode(news) {
-            userDefaults.set(newsArray, forKey: key)
+            UserDefaultsManager.userDefaults.set(newsArray, forKey: key)
         }
     }
 }

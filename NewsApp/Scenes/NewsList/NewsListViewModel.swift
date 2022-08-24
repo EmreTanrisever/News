@@ -12,22 +12,20 @@ class NewsListViewModel {
     var refresh: (() -> Void)?
 
     func getNews() {
-        let url = NetworkConstants.url
-        service.getNews(url: url) { response in
+        service.fetchNews { response in
             AppManager.shared.news = response.articles
             self.refresh?()
         }
     }
 
     func searchNews(text: String) {
-        let url = NetworkConstants.BASE_URL +
-        NetworkConstants.EVERTİNG +
-        NetworkConstants.SEARCH + text +
-        NetworkConstants.DATE +
-        NetworkConstants.API_KEY
-
-        service.getNews(url: url) { response in
-            AppManager.shared.news = response.articles
+        if !text.isEmpty {
+            service.searchNews(text: text) { response in
+                AppManager.shared.news = response.articles
+                print(AppManager.shared.news)
+            }
+        } else {
+            getNews()
         }
     }
 }

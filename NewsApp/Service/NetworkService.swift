@@ -8,13 +8,18 @@
 import AVFoundation
 
 protocol NetworkServiceProtocol {
-    func getNews(url: String, completion: @escaping(NewsResponse) -> Void)
-//    func getNews(url: String)
+    func fetchNews(completion: @escaping(NewsResponse) -> Void)
+    func searchNews(text: String, completion: @escaping(NewsResponse) -> Void)
+    func filterNews(to: String, from: String, completion: @escaping(NewsResponse) -> Void)
 }
 
 final class NetworkService: NetworkServiceProtocol {
-    func getNews(url: String, completion: @escaping (NewsResponse) -> Void) {
-        NetworkLayer.shared.fetchNews(url: url, type: NewsResponse.self) { response in
+
+    func fetchNews(completion: @escaping (NewsResponse) -> Void) {
+        NetworkLayer.shared.sendRequest(
+            url: NetworkEndPoint.NewsEndPoint(),
+            type: NewsResponse.self
+        ) { response in
             switch response {
             case .success(let news):
                 completion(news)
@@ -23,5 +28,24 @@ final class NetworkService: NetworkServiceProtocol {
                 print(error)
             }
         }
+    }
+
+    func searchNews(text: String, completion: @escaping(NewsResponse) -> Void) {
+        NetworkLayer.shared.sendRequest(
+            url: NetworkEndPoint.NewsSearchEndPoint(keyWord: text),
+            type: NewsResponse.self
+        ) { response in
+            switch response {
+            case .success(let news):
+                completion(news)
+
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+
+    func filterNews(to: String, from: String, completion: @escaping(NewsResponse) -> Void) {
+        print("Loading...")
     }
 }

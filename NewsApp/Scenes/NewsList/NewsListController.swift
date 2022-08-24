@@ -60,7 +60,7 @@ class NewsListController: UIViewController {
     }
 
     @objc private func didPullToRefresh() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.newsListTableView.refreshControl?.endRefreshing()
         }
         viewModel.getNews()

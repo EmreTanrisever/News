@@ -46,6 +46,8 @@
 		8BC4144928A7100700EDFF3E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8BC4144B28A7100700EDFF3E /* Localizable.strings */; };
 		8BC4145028A7105500EDFF3E /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4144F28A7105500EDFF3E /* Extension.swift */; };
 		8BC4145428A711C100EDFF3E /* DesignConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC4145328A711C100EDFF3E /* DesignConstant.swift */; };
+		8BC5396828AFDCCC00C5BF70 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC5396728AFDCCC00C5BF70 /* Enums.swift */; };
+		8BD396CB28B663E7006A5BB2 /* NetworkEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD396CA28B663E7006A5BB2 /* NetworkEndPoint.swift */; };
 		C0A1E874B899E967C2336C42 /* Pods_NewsAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B99EA8B4AD394CE45171864E /* Pods_NewsAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -110,6 +112,8 @@
 		8BC4144C28A7101200EDFF3E /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8BC4144F28A7105500EDFF3E /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		8BC4145328A711C100EDFF3E /* DesignConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignConstant.swift; sourceTree = "<group>"; };
+		8BC5396728AFDCCC00C5BF70 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		8BD396CA28B663E7006A5BB2 /* NetworkEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEndPoint.swift; sourceTree = "<group>"; };
 		9A666C56E29448ACD701BE35 /* Pods-NewsApp-NewsAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp-NewsAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-NewsApp-NewsAppUITests/Pods-NewsApp-NewsAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1FD4865F4169ACE23E9A443 /* Pods-NewsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsApp.release.xcconfig"; path = "Target Support Files/Pods-NewsApp/Pods-NewsApp.release.xcconfig"; sourceTree = "<group>"; };
 		A275AA3E6C94EF349684002B /* Pods-NewsAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NewsAppTests/Pods-NewsAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -342,6 +346,7 @@
 		8BC4144328A70F7700EDFF3E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				8BC5396628AFDCBB00C5BF70 /* Enums */,
 				8BC4145128A7117C00EDFF3E /* Constants */,
 				8BC4144E28A7104800EDFF3E /* Extensions */,
 			);
@@ -363,6 +368,15 @@
 				8B7A673D28A924B600581EBF /* NetworkContants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		8BC5396628AFDCBB00C5BF70 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				8BC5396728AFDCCC00C5BF70 /* Enums.swift */,
+				8BD396CA28B663E7006A5BB2 /* NetworkEndPoint.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 		D51B85292CC0B26F2E276500 /* Pods */ = {
@@ -662,6 +676,7 @@
 				8B81896028A98D6100C6BE8B /* NewsListTableViewCell+Extension.swift in Sources */,
 				8B81895E28A98C1100C6BE8B /* NewsListTableViewCell.swift in Sources */,
 				8B05FE9E28AAFB2900D31E6D /* NewsDetailViewController.swift in Sources */,
+				8BC5396828AFDCCC00C5BF70 /* Enums.swift in Sources */,
 				8B7A674C28A92A6E00581EBF /* NetworkService.swift in Sources */,
 				8B05FEA228AAFE3F00D31E6D /* UserDefaultsManager.swift in Sources */,
 				8B3DB9CF28A709B700BCE226 /* SplashViewController.swift in Sources */,
@@ -674,6 +689,7 @@
 				8B7A673A28A91CFA00581EBF /* BookMarksController.swift in Sources */,
 				8B7A673E28A924B600581EBF /* NetworkContants.swift in Sources */,
 				8B21F6EE28A94FF400CFA21E /* AppManager.swift in Sources */,
+				8BD396CB28B663E7006A5BB2 /* NetworkEndPoint.swift in Sources */,
 				8B7A674728A9266D00581EBF /* NewsResponse.swift in Sources */,
 				8B7A673C28A9236800581EBF /* NewsList+Contraints.swift in Sources */,
 				8B3DB9CD28A709B700BCE226 /* SceneDelegate.swift in Sources */,
